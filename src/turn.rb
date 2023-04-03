@@ -9,6 +9,7 @@ class Turn
   end
 
   def steps
+    puts ""
     puts "----- NEW TURN -----"
     puts "#{@player.name}: #{@question.ask}"
     
@@ -20,14 +21,6 @@ class Turn
     else
       puts "Yes! You are correct."
     end
-    
-    if @player.is_alive
-      puts @next_turn
-      @next_turn = true
-    else 
-      puts @next_turn
-      @next_turn = false
-    end 
     
   end
 
