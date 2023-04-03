@@ -1,7 +1,7 @@
 class Input
 
   def initialize
-    @val = gets.chomp
+    @val = gets.chomp.to_i
   end
   
   def val
