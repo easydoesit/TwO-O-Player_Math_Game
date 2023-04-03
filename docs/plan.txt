@@ -1,35 +1,36 @@
-Class Game
-  
-  * Starts the Game
-    - Needs a Method to Inititalize the game.
-  
-  * Tracks Score
-    - Needs a method to track wrong answers.
-    - Needs variables for each player to track score
-    - Once a players score is 0/3 the games ends and a winner is declared
+Class Game (turn, players, question)
+  - initialize the game.
+      * player.new 2 times
+      * turn.new 1 time
+  - loop every turn returns a new instance check for end of game
+  - end game
+   
+Class Turn (player)
+    - player.is_alive > 
+      > question.new
+        > "----- NEW TURN -----"
+        > Ask: "Player (player): What does (question(a)) plus (question(b)) equal" -> Class Question
+        > Check Answer -> Method Check question
+        > Negative: "Seriously? No!"
+        > Positive: "YES! You are correct."
+        > Data: "P1: n/3 vs P2: n/3"
+        > turn.new   
+
+    - !player.is_alive
           > "Player (n) wins with a score of (n)/3
           > "Good bye!
-  
-  * Instantiate Turns
-    - Need to track who's turn it is.
-    - Needs a method to Instantiate a Turns
-      > "----- NEW TURN -----"
-      > Ask: "Player (n): What does (a) plus (b) equal"
-      > Negative: "Seriously? No!"
-      > Positive: "YES! You are correct."
-      > Data: "P1: n/3 vs P2: n/3"
-   
-  
-  * Delivers Feedback
-    - Needs a method to deliver the Feedback 
+        - return nextturn false
      
-
-
 Class Player
-  
-  * A player stores how many lives they have
-  
+  * A player stores how many lives they have 
+    - number of lives DATA
+    - is_alive Method
   * Instantiates the 2 players (Player 1 and Player 2)
 
-Class Question  
-  * Stores the Methods for making the Questions
+Class Question
+  question.ask
+    - Input Class
+  question.answer
+    - true or false
+
+Class Addition Question
