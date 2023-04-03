@@ -5,7 +5,6 @@ class Player
   def initialize(name, lives)
     @name = name
     @lives = lives
-    puts "#{@name} was initialized and has #{@lives} lives" 
   end
 
   def name
